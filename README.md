@@ -20,7 +20,7 @@ node index
 
 ### 4. 使用
 ```
-假设部署后网址为：http://md.zuorishu.com/upload
+假设部署后网址为：http://md.zuorishu.com:80
 
 1.访问http://md.zuorishu.com/upload上传你要预览的md文件
 2.上传成功后系统默认为你分配访问链接
