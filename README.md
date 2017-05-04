@@ -10,8 +10,8 @@ npm install
 
 node index
 ```
-### 3. 站点发布[以IIS做示例]
-> 安装要求
+### 3. 站点发布
+> 安装要求【以IIS做示例】
 - 服务器端安装 node [点此下载](http://nodejs.org/)
 - 安装 IIS的 URL Rewrite 模块 [点此下载]( http://www.iis.net/downloads/microsoft/url-rewrite)
 - 安装 iisnode [点此下载](https://github.com/tjanczuk/iisnode/releases/download/v0.2.11/iisnode-full-v0.2.11-x64.msi)
