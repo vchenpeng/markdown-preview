@@ -14,8 +14,9 @@ node index
 > 安装要求
 - 服务器端安装 node [点此下载](http://nodejs.org/)
 - 安装 IIS的 URL Rewrite 模块 [点此下载]( http://www.iis.net/downloads/microsoft/url-rewrite)
-- 安装 iisnode [点此下载](https://github.com/tjanczuk/iisnode)
+- 安装 iisnode [点此下载](https://github.com/tjanczuk/iisnode/releases/download/v0.2.11/iisnode-full-v0.2.11-x64.msi)，另附 iisnode源码 [github地址](https://github.com/tjanczuk/iisnode)
 > 然后正常顺序部署站点就OK
+
 
 ### 4. 使用
 ```
