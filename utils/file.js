@@ -13,7 +13,7 @@ exports.upload = function (req, res, next) {
         if (err) {
             console.log(err);
         }
-
+        console.log("文件名称", files.resource.name);
         var filename = encodeURIComponent(files.resource.name);
 
         // 对文件名进行处理，以应对上传同名文件的情况
