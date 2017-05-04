@@ -1,0 +1,35 @@
+{
+  "name": "markdown-preview",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+		
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vchenpeng/markdown-preview.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vchenpeng/markdown-preview/issues"
+  },
+  "homepage": "https://github.com/vchenpeng/markdown-preview#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "formidable": "^1.1.1"
+  },
+  "devDependencies": {
+	
+  },
+  "engines": {
+    "node": ">= 4.0.0",
+    "npm": ">= 3.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}
