@@ -30,4 +30,4 @@ node index
 ```
 http://md.zuorishu.com/dGVzdA%3D%3D
 ```
-![test](http:////qr.api.cli.im/qr?data=http%253A%252F%252Fmd.zuorishu.com%252FdGVzdA%25253D%25253D&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=fa86d219a610494d1dce0531512e3dc3)
+![test](http://qr.api.cli.im/qr?data=http%253A%252F%252Fmd.zuorishu.com%252FdGVzdA%25253D%25253D&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=fa86d219a610494d1dce0531512e3dc3)
