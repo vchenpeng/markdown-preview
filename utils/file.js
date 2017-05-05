@@ -13,7 +13,7 @@ exports.upload = function (req, res, next) {
         if (err) {
             console.log(err);
         }
-        console.log("文件名称", files.resource.name);
+        console.log("文件名称1", files.resource.name);
         var filename = encodeURIComponent(files.resource.name);
 
         // 对文件名进行处理，以应对上传同名文件的情况
@@ -27,6 +27,7 @@ exports.upload = function (req, res, next) {
         var avatarName = decodeURIComponent(name) + '.' + type;
 
         var newPath = form.uploadDir + avatarName;
+        console.log("文件名称2", files.resource.path, newPath);
         fs.renameSync(files.resource.path, newPath);  //重命名
         next(decodeURIComponent(name));
     });
