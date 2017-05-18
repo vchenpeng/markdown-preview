@@ -1,40 +1,44 @@
-# markdown-preview Ô¤ÀÀ
+# markdown-preview é¢„è§ˆ
 
-### 1. ½éÉÜ
+### 1. ä»‹ç»
 
-> ½«markdownÎÄ¼ş¶¯Ì¬×ª»»£¬¿ÉÖ±½ÓÍøÒ³ä¯ÀÀ
+> å°†markdownæ–‡ä»¶åŠ¨æ€è½¬æ¢ï¼Œå¯ç›´æ¥ç½‘é¡µæµè§ˆ
     
-### 2. Ê¹ÓÃ·½·¨
+### 2. ä½¿ç”¨æ–¹æ³•
 ```
 npm install
 
 node index
 ```
-### 3. Õ¾µã·¢²¼
-> °²×°ÒªÇó¡¾ÒÔIIS×öÊ¾Àı¡¿
-- ·şÎñÆ÷¶Ë°²×° node [µã´ËÏÂÔØ](http://nodejs.org/)
-- °²×° IISµÄ URL Rewrite Ä£¿é [µã´ËÏÂÔØ]( http://www.iis.net/downloads/microsoft/url-rewrite)
-- °²×° iisnode [µã´ËÏÂÔØ](https://github.com/tjanczuk/iisnode/releases/download/v0.2.11/iisnode-full-v0.2.11-x64.msi)
-> È»ºóÕı³£Ë³Ğò²¿ÊğÕ¾µã¾ÍOK
+### 3. ç«™ç‚¹å‘å¸ƒ
+> å®‰è£…è¦æ±‚ã€ä»¥IISåšç¤ºä¾‹ã€‘
+- æœåŠ¡å™¨ç«¯å®‰è£… node [ç‚¹æ­¤ä¸‹è½½](http://nodejs.org/)
+- å®‰è£… IISçš„ URL Rewrite æ¨¡å— [ç‚¹æ­¤ä¸‹è½½]( http://www.iis.net/downloads/microsoft/url-rewrite)
+- å®‰è£… iisnode [ç‚¹æ­¤ä¸‹è½½](https://github.com/tjanczuk/iisnode/releases/download/v0.2.11/iisnode-full-v0.2.11-x64.msi)
+> ç„¶åæ­£å¸¸é¡ºåºéƒ¨ç½²ç«™ç‚¹å°±OK
 
 
-### 4. Ê¹ÓÃ
+### 4. ä½¿ç”¨
 ```
-¼ÙÉè²¿ÊğºóÍøÖ·Îª£ºhttp://md.zuorishu.com:80
+å‡è®¾éƒ¨ç½²åç½‘å€ä¸ºï¼šhttp://md.zuorishu.com:80
 
-1.·ÃÎÊhttp://md.zuorishu.com/uploadÉÏ´«ÄãÒªÔ¤ÀÀµÄmdÎÄ¼ş
-2.ÉÏ´«³É¹¦ºóÏµÍ³Ä¬ÈÏÎªÄã·ÖÅä·ÃÎÊÁ´½Ó
-3.·ÃÎÊÎªÄã·ÖÅäµÄÁ´½ÓµØÖ·¼´¿É
+1.è®¿é—®http://md.zuorishu.com/uploadä¸Šä¼ ä½ è¦é¢„è§ˆçš„mdæ–‡ä»¶
+2.ä¸Šä¼ æˆåŠŸåç³»ç»Ÿé»˜è®¤ä¸ºä½ åˆ†é…è®¿é—®é“¾æ¥
+3.è®¿é—®ä¸ºä½ åˆ†é…çš„é“¾æ¥åœ°å€å³å¯
 
 ```
-### 5. ²âÊÔ·ÃÎÊµØÖ·ºÍ¶şÎ¬Âë
+### 5. æµ‹è¯•è®¿é—®åœ°å€å’ŒäºŒç»´ç 
 ```
 http://md.zuorishu.com/dGVzdA%3D%3D
 ```
 ![test](http://qr.api.cli.im/qr?data=http%253A%252F%252Fmd.zuorishu.com%252FdGVzdA%25253D%25253D&level=H&transparent=false&bgcolor=%23ffffff&forecolor=%23000000&blockpixel=12&marginblock=1&logourl=&size=280&kid=cliim&key=fa86d219a610494d1dce0531512e3dc3)
 
-### 6. ÒÑÖªbug
+### 6. å·²çŸ¥bug
 ```
-+ ÉÏ´«ÎÄ¼şÃûÎªÖĞÎÄµ¼ÖÂ³ö´í
++ ä¸Šä¼ æ–‡ä»¶åä¸ºä¸­æ–‡å¯¼è‡´å‡ºé”™
 ```
 
+### 7. ä¿®æ”¹è®°å½•
+```
++ å°†mdæ–‡æ¡£å­˜å…¥mongodb
+```
