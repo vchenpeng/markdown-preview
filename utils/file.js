@@ -22,7 +22,7 @@ exports.upload = function (req, res, next) {
         if (err) {
             console.log(err);
         }
-        console.log("文件名称1", files.resource.name);
+        console.log("文件名称1", files.resource);
         var filename = encodeURIComponent(files.resource.name);
 
         // 对文件名进行处理，以应对上传同名文件的情况
@@ -34,14 +34,15 @@ exports.upload = function (req, res, next) {
         }
 
         var avatarName = decodeURIComponent(name) + '.' + type;
-
-        var mongooseModel = db.model('mongoose', mongooseSchema);
+        console.log("my db",db);
+        var mongooseModel = db.model('md_info', mongooseSchema);
+        console.log("my mongooseModel",mongooseModel);
+        var md_data = fs.readFileSync(files.resource.path, "utf-8");
         var doc = {
-            key: +new Date(),
-            name: files.resource.name,
+            name: name,
             filename: avatarName,
-            content: "test data~"
-        }；
+            content: md_data
+        };
         var entity = new mongooseModel(doc);
         entity.save(function(error){
             if(error){
