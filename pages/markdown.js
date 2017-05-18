@@ -22,6 +22,8 @@ module.exports = function (req, res, app) {
                 //var result = aesutil.encryption("aaabbb", "aes");
                 res.send(result);
             } else {
+
+
                 url = 'files/404.md';
                 var data = fs.readFileSync(url, "utf-8");
                 var result = CryptoJS.AES.encrypt(data, "aes").toString();
