@@ -1,12 +1,14 @@
 ﻿var formidable = require('formidable');
 var fs = require('fs');  //node.js核心的文件处理模块
 var mongoose = require("mongoose");
+var CryptoJS = require('../static/utils/aes.js');
 var db = mongoose.createConnection("mongodb://115.29.230.180:27017/dada");
 var mongooseSchema = new mongoose.Schema({
     key : {type:String},        //显示key
     name : {type:String},       //文件名称
     filename : {type:String},   //文件名称含拓展名称
     content : {type:String},
+    pwd: {type:String,default:''},
     time : {type:Date,default:Date.now}
 });
 
@@ -35,26 +37,55 @@ exports.upload = function (req, res, next) {
 
         var avatarName = decodeURIComponent(name) + '.' + type;
         console.log("my db",db);
+
         var mongooseModel = db.model('md_info', mongooseSchema);
         console.log("my mongooseModel",mongooseModel);
-        var md_data = fs.readFileSync(files.resource.path, "utf-8");
+        var md_data_s = fs.readFileSync(files.resource.path, "utf-8");
+        console.log("文档的长度",md_data_s.length);
+        var md_data = CryptoJS.AES.encrypt(md_data_s, "aes").toString();
         var doc = {
-            name: name,
+            name: decodeURIComponent(name),
             filename: avatarName,
             content: md_data
         };
         var entity = new mongooseModel(doc);
-        entity.save(function(error){
+        entity.save(function(error,data){
             if(error){
                 console.log(error);
             }else{
                 console.log("保存成功");
+                next(data._id,data.name);
             }
         });
 
-        var newPath = form.uploadDir + avatarName;
-        console.log("文件名称2", files.resource.path, newPath);
-        fs.renameSync(files.resource.path, newPath);  //重命名
-        next(decodeURIComponent(name));
+
+        //==============================
+        // fs.readFile(files.resource.path, 'utf-8', functino(err,md_data_s){
+        //     if (err) { 
+        //         console.error(err); 
+        //     } else { 
+        //         var md_data = CryptoJS.AES.encrypt(md_data_s, "aes").toString();
+        //         var doc = {
+        //             name: decodeURIComponent(name),
+        //             filename: avatarName,
+        //             content: md_data
+        //         };
+        //         var entity = new mongooseModel(doc);
+        //         entity.save(function(error,data){
+        //             if(error){
+        //                 console.log(error);
+        //             }else{
+        //                 console.log("保存成功");
+        //                 //next(data._id,data.name);
+        //             }
+        //         });
+
+        //     } 
+        // });
+
+        //var newPath = form.uploadDir + avatarName;
+        //console.log("文件名称2", files.resource.path, newPath);
+        //fs.renameSync(files.resource.path, newPath);  //重命名
+        //next(decodeURIComponent(name));
     });
 };

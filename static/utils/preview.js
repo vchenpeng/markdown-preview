@@ -15,22 +15,27 @@ function getCookie(e) {
 function postMessage(e) {
     //window.parent && window.parent.postMessage && window.parent.postMessage(e, "*")
 }
-$(function () {
+//$(function () {
     var q = window.location.pathname.slice(1) || '404';
     window.loadmd = e;
-    function e(q) {
-        var e = "./?key=" + q;
+
+    $(".markdown-body").html("");
+    var value = prompt('输入提取码：','');
+    e(q,value);
+
+    function e(q,f) {
+        var e = "./?key=" + q + "&flag=" + f;
         t = getParameterByName("version");
         e && (t && (e = e + "&version=" + t), $.get(e,
         function (t) {
             var s = CryptoJS.AES.decrypt(t, "aes").toString(CryptoJS.enc.Utf8);
             $(".markdown-body").html(mdc.render(s));
         }).error(function (e) {
-            q = 'NDA0';
-            window.loadmd(q);
+            //q = 'NDA0';
+            //window.loadmd(q);
         }))
     }
-    e(q);
+    
     window.preview = function (e) {
         $.get(e,
         function (e) {
@@ -52,4 +57,4 @@ $(function () {
     function (e) {
         8 != e.keyCode && 46 != e.keyCode || /INPUT|SELECT|TEXTAREE/i.test(e.target.tagName) || e.preventDefault()
     })
-});
+//});
