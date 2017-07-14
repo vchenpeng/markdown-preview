@@ -1,4 +1,4 @@
-﻿module.exports = function (app) {
+﻿var fn = (app) => {
     app.get('/', function (req, res) {
         require('./pages/markdown')(req, res, app);
     });
@@ -17,4 +17,7 @@
     app.get('/pay', function (req, res) {
         require('./pages/pay')(req, res.app)
     });
-};
+}
+
+module.exports = fn;
+//export const name = "cp"
