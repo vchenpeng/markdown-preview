@@ -14,4 +14,7 @@
     app.get('/?key=:code', function (req, res) {
         require('./pages/markdown')(req, res, app);
     });
+    app.get('/pay', function (req, res) {
+        require('./pages/pay')(req, res.app)
+    });
 };
