@@ -17,6 +17,11 @@
     app.get('/pay', function (req, res) {
         require('./pages/pay')(req, res.app)
     });
+
+    app.post("./push", function (req, res) {
+        debugger;
+        console.log("test application")
+    });
 }
 
 module.exports = fn;
